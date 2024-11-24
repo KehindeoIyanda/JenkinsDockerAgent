@@ -42,7 +42,7 @@ pipeline {
             }
         }
 
-        /*stage('Push Docker Image to ECR') {
+        stage('Push Docker Image to ECR') {
             agent {
                 docker {
                     image 'docker:latest'
@@ -75,6 +75,6 @@ pipeline {
                     }
                 }
             }
-        }*/
+        }
     }
 }
