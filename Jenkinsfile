@@ -3,12 +3,12 @@ pipeline {
     agent none  // No global agent, each stage will define its own
     environment {
         DOCKER_CONFIG = '/tmp/.docker'  // Set to a directory with write access
-        repoUri = "442042522885.dkr.ecr.eu-west-2.amazonaws.com/webform"
-        repoRegistryUrl = "https://442042522885.dkr.ecr.eu-west-2.amazonaws.com"
-        registryCreds = 'ecr:eu-west-2:awscreds'
+        repoUri = "207567758858.dkr.ecr.us-east-1.amazonaws.com/webform"
+        repoRegistryUrl = "https://207567758858.dkr.ecr.us-east-1.amazonaws.com"
+        registryCreds = 'ecr:us-east-1:awscreds'
         cluster = "webform"
         service = "webform-svc"
-        region = 'eu-west-2'
+        region = 'us-east-1'
     }
 
     stages {
@@ -26,7 +26,7 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+        /*stage('Build Docker Image') {
             agent {
                 docker {
                     image 'docker:latest'
@@ -75,6 +75,6 @@ pipeline {
                     }
                 }
             }
-        }
+        }*/
     }
 }
