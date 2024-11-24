@@ -60,7 +60,7 @@ pipeline {
             }
         }
 
-        /*stage('Deploy to ECS') {
+        stage('Deploy to ECS') {
             agent {
                 docker {
                     image 'amazon/aws-cli:latest'  // Use a pre-built AWS CLI Docker image for ECS deployment
